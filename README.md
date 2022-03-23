@@ -5,7 +5,7 @@ Exercice technique / fonctionnel utilisé par ACSEO pour ses recrutements.
 
 ## Contexte
 
-Vous êtes développeur chez ACSEO. Vous recevez une demande de la part d'un client pour la mise en place d'une nouvelle fonctionnalité sur son site Internet.
+Vous êtes développeur chez Artmajeur. Vous recevez une demande de la direction pour la mise en place d'une nouvelle fonctionnalité sur son site Internet.
 
 
 > Nous souhaiterions mettre en place un formulaire de contact sur notre site.
