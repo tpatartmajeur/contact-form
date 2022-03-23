@@ -1,6 +1,6 @@
 # Contact Form
 
-Exercice technique / fonctionnel utilisé par ACSEO pour ses recrutements.
+Exercice technique / fonctionnel utilisé par Artmajeur pour ses recrutements.
 
 
 ## Contexte
