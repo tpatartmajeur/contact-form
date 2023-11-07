@@ -1,0 +1,10 @@
+<h1>Hello BackOffice</h1>
+
+
+{% for form in forms %}
+    <ul>
+        <li>{{ form.name }}</li>
+        <li>{{ form.email }}</li>
+        <li>{{ form.question }}</li>
+    </ul>
+{% endfor %}
