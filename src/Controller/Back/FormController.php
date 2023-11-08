@@ -17,6 +17,20 @@ class FormController extends AbstractController
      */
     public function viewForms(FormRepository $formRepository)
     {
-        return $this->render('/back/form-list.html.twig', ['forms' => $formRepository->findAll()]);
+        $forms = $formRepository->findAll();
+        $groupForm = [];
+
+        foreach($forms as $form){
+            $email = $form->getEmail();
+            // verify if in array, email key doesn't exist.
+            if(!isset($groupForm[$email])){
+                // we create a new array from this email key
+                $groupForm[$email] = [];
+            }
+            // then add the data to the corresponding emplacement
+            $groupForm[$email][] = $form->getQuestion();
+        }
+
+        return $this->render('/back/form-list.html.twig', ['groupForm' => $groupForm ]);
     }
 }

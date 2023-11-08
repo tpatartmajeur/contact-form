@@ -1,4 +1,9 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
 {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
     {{ form_widget(form) }}
     <button class="submit__button"> Envoyer </button>
 {{ form_end(form) }}
+
+{% endblock %}
