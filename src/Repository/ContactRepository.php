@@ -2,32 +2,32 @@
 
 namespace App\Repository;
 
-use App\Entity\Form;
+use App\Entity\Contact;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Form>
+ * @extends ServiceEntityRepository<Contact>
  *
- * @method Form|null find($id, $lockMode = null, $lockVersion = null)
- * @method Form|null findOneBy(array $criteria, array $orderBy = null)
- * @method Form[]    findAll()
- * @method Form[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Contact|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Contact|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Contact[]    findAll()
+ * @method Contact[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class FormRepository extends ServiceEntityRepository
+class ContactRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Form::class);
+        parent::__construct($registry, Contact::class);
     }
 
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function add(Form $entity, bool $flush = true): void
+    public function add(Contact $entity, bool $flush = true): void
     {
         $this->_em->persist($entity);
         if ($flush) {
@@ -39,7 +39,7 @@ class FormRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Form $entity, bool $flush = true): void
+    public function remove(Contact $entity, bool $flush = true): void
     {
         $this->_em->remove($entity);
         if ($flush) {
@@ -48,7 +48,7 @@ class FormRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Form[] Returns an array of Form objects
+    //  * @return Contact[] Returns an array of Contact objects
     //  */
     /*
     public function findByExampleField($value)
@@ -65,7 +65,7 @@ class FormRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Form
+    public function findOneBySomeField($value): ?Contact
     {
         return $this->createQueryBuilder('f')
             ->andWhere('f.exampleField = :val')

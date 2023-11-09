@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\FormRepository;
+use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=FormRepository::class)
+ * @ORM\Entity(repositoryClass=ContactRepository::class)
  */
-class Form
+class Contact
 {
     /**
      * @ORM\Id
@@ -43,6 +43,12 @@ class Form
      * @Assert\NotBlank
      */
     private $question;
+
+    /**
+     * @ORM\Column(type="boolean") 
+     */
+    private $isChecked = 0;
+
 
     public function getId(): ?int
     {
@@ -84,4 +90,15 @@ class Form
 
         return $this;
     }
+
+    public function getIsChecked(): ?bool
+    {
+        return $this->isChecked;
+    }
+
+    public function setIsChecked()
+    {
+        $this->isChecked = true;
+    }
+
 }
