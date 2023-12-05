@@ -20,4 +20,4 @@ Les règles de gestion suivantes sont à mettre en place :
 
 > Toute demande de contact doit déclencher la création d'un fichier JSON unique dans un répertoire spécifique non exposé par le serveur web, qui contient l'ensemble du contenu de la demande : informations du contact et contenu de la demande. A terme d'autres notifications seront déclenchées.
 
-Il vous est demandé de mettre en place la solution sur la base du Framework Symfony.
+Il vous est demandé de mettre en place la solution sur la base du Framework Symfony (6).
