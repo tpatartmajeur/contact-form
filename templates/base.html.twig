@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ asset ("css/artmajeur.css") }}">
+
+    <title>Contact Artmajeur</title>
+</head>
+    <body>
+        <nav>
+            <div>
+                <a href="{{ path('app_front_home') }}">Accueil</a>
+                <a href="{{ path('app_front_contact') }}">Formulaire de contact</a>
+                {% if not app.user %}
+                    <a href="{{ path('app_back_contacts') }}">Se connecter</a>
+                {% else %}
+                    {{ app.user.email }}
+                    <a href="{{ path ('app_logout') }}">Déconnexion</a>
+                {% endif %}
+            </div>
+            <h1>Artmajeur</h1>
+        </nav>
+        {% block body %}{% endblock %}
+    </body>
+</html>

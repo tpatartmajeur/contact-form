@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<h1>Liste des questions</h1>
+
+
+    {% for email, forms in groupContact %}
+            <ul>{{ email }}
+            {% for question in forms %}
+                {% if question.ischecked %}
+                    <li class='checked'>{{ question.question }}</li>
+                {% else %}
+                    <li>{{ question.question }}</li>
+                    <a href="{{ path('app_back_contact_checked',{'id': question.id })}}" class="check">Cocher</a>
+                {% endif %}
+            {% endfor %}
+            </ul>
+    {% endfor %}
+{% endblock %}
